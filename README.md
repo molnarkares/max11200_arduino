@@ -30,17 +30,15 @@ If waitForReady returns true, you can call _sensor.analogReadUnsigned()_ or _sen
 ### Configuration
 
 After initialization with _begin()_ you can set up the max11200 parameters with the following APIs:
-* _sensor.config(val);_ where val is the desired value of the CTRL1 register of the device. Check max11200.h for the pre-defined values 
+* _sensor.config(val);_ where val is the desired value of the CTRL1 register of the device. Check max11200.h for the pre-defined values. 
+Example: _sensor.config(Max11210::linef|Max11210::ub);_
 
-** example: _sensor.config(Max11210::linef|Max11210::ub);_
-
-* _sensor.setRate(rate);_ will set the conversion rate. Check max11200.h for the pre-defined values 
-
-** example: _sensor.setRate(Max11210::rate::rate120sps);_
+* _sensor.setRate(rate);_ will set the conversion rate. Check max11200.h for the pre-defined values.
+Example: _sensor.setRate(Max11210::rate::rate120sps);_
 
 ### Controlling the digital IOs of MAX11200
 
-You can configure the digital IO pins of the device with the _pinMode(pin,direction)_ method
+You can configure the digital IO pins of the device with the _pinMode(pin,direction)_ method.
 Example: _sensor.pinMode(Max11210::dPin::gpio4,Max11210::dMode::output);_
 
 Then get or set the digital values via the digitalWrite and digitalRead APIs.
