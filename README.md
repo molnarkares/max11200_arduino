@@ -5,7 +5,8 @@ MAX11200 ADC Arduino library
 
 ### Includes
 
-_#include "max11200.h"_
+_#include "max11200.h"_   
+
 _#include "SPI.h"_
 
 ### Instantiation
@@ -44,7 +45,7 @@ Example: _sensor.digitalWrite(Max11210::dPin::gpio4,Max11210::dVal::low);_
 
 ### Calibration
 
-Only the self calibration is implemented and it is called by the _begin()_ method at startup. If needed, the self calibration can be triggered via calling the calibrateSelf() method.
+Only the self calibration is implemented and it is called by the _begin()_ method at startup. If needed, the self calibration can be triggered via calling the _calibrateSelf()_ method.
 
 
 
